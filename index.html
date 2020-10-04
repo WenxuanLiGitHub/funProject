@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Dimiri Marco</title>
+    <title>Wenxuan Li</title>
   </head>
   <body>
     <div class="portofolio">
@@ -53,15 +53,32 @@
             <div class="details">
               <h1>Wenxuan Li</h1>
               <h2>Information Systems Student @TUM</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus
+                consequuntur, iure nemo dolorum tempora laboriosam eum nulla
+                modi ducimus minus sunt ipsum officiis, saepe numquam quo
+                ratione consectetur soluta fugit? Lorem ipsum dolor sit, amet
+                consectetur adipisicing elit. Quisquam illo velit, cum unde
+                similique facilis tenetur debitis voluptas asperiores doloremque
+                natus.
+              </p>
               <a
                 id="cv-button"
                 href="./cv/CV_Wenxuan_Li_recent.pdf"
-                download="Wenxuan_Li_CV"
+                target="blank"
                 >Get CV</a
+              >
+              <a
+                id="linkedin-button"
+                href="https://www.linkedin.com/in/wenxuan-li-194a77127/"
+                target="blank"
+                >Checkout my LinkedIn</a
               >
             </div>
             <div class="hero">
-              <a href="./photo.html">
+              <!-- Comment out the existing link -->
+              <!-- <a href="./photo.html"> -->
+              <a href="#">
                 <img
                   class="model-left"
                   src="./img/wenxuan-left.jpg"
@@ -72,14 +89,37 @@
                   src="./img/wenxuan-right.jpg"
                   alt="model"
                 />
+                <div class="img-overlay">Click on the image -> detail page</div>
               </a>
             </div>
           </section>
           <section class="page chef">
             <div class="details">
-              <h1>John Savos</h1>
+              <!-- <h1>John Savos</h1>
               <h2>Pro Chef</h2>
-              <p>02/05/2015</p>
+              <p>02/05/2015</p> -->
+              <!-- Music Player -->
+              <div class="music-container">
+                <h3>My Favorite Music</h3>
+                <img src="./img/elle-pleut-album-cover.png" />
+                <input
+                  type="range"
+                  id="range"
+                  class="level"
+                  value="0"
+                  min="0"
+                />
+                <div class="buttons">
+                  <button id="pre"><img src="./img/rewind.png" /></button>
+                  <button id="play">
+                    <img id="play-img" src="./img/play.png" />
+                  </button>
+                  <button id="next">
+                    <img src="./img/fast-forward.png" />
+                  </button>
+                </div>
+              </div>
+              <!-- Music Player ends  -->
             </div>
             <div class="hero">
               <a href="./chef.html">
@@ -124,7 +164,7 @@
               </svg>
             </div>
             <div class="page-2">
-              <h3 class="page-title">Experiences</h3>
+              <h3 class="page-title">Hobbies</h3>
               <svg
                 class="slide"
                 width="12"
@@ -137,20 +177,7 @@
               </svg>
             </div>
             <div class="page-3">
-              <h3 class="page-title" s>Educations</h3>
-              <svg
-                class="slide"
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="6" cy="6" r="6" fill="white" />
-              </svg>
-            </div>
-            <div class="page-3">
-              <h3 class="page-title" s>Hoobies</h3>
+              <h3 class="page-title" s>Experiences</h3>
               <svg
                 class="slide"
                 width="12"

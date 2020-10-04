@@ -3,6 +3,7 @@
 *::after {
   margin: 0;
   padding: 0;
+  outline: 0;
   box-sizing: border-box;
 }
 
@@ -41,7 +42,7 @@ nav {
 .page {
   min-height: 90vh;
   display: grid;
-  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+  grid-template-columns: 5% 40% 40% 10% 5%;
 }
 .chef,
 .hairstyle {
@@ -69,13 +70,14 @@ nav {
 }
 .hero a {
   display: flex;
+  position: relative;
 }
 
 .model-right {
-  transform: translate(0%, 15%);
+  transform: translate(0%, 10%);
 }
 .model-left {
-  transform: translate(0%, -15%);
+  transform: translate(0%, -10%);
 }
 
 .hero:hover .model-right {
@@ -83,6 +85,10 @@ nav {
 }
 .hero:hover .model-left {
   transform: translate(0%, 0%);
+}
+
+.hero:hover .img-overlay {
+  opacity: 1;
 }
 
 .details {
@@ -99,8 +105,8 @@ nav {
   padding: 10px 0px;
 }
 .details p {
-  font-size: 24px;
-  padding: 20px 0px 50px 0px;
+  font-size: 16px;
+  padding: 10px 0px 20px 0px;
 }
 
 .pages {
@@ -306,7 +312,8 @@ nav {
   transform: scale(1.3);
 }
 
-#cv-button {
+#cv-button,
+#linkedin-button {
   margin-top: 15px;
   background-color: rgb(34, 30, 53);
   color: white;
@@ -319,8 +326,118 @@ nav {
   display: inline-block;
 }
 
+#linkedin-button {
+  margin-left: 20px;
+}
+
 #cv-button:hover,
-#cv-button:active {
+#cv-button:active,
+#linkedin-button:hover,
+#linkedin-button:active {
   background-color: thistle;
   color: rgb(34, 30, 53);
 }
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  height: 45px;
+  text-align: center;
+  border-radius: 25px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.4); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+}
+
+/* Music player */
+.music-container {
+  align-self: center;
+  padding: 16px;
+  width: 300px;
+  border-radius: 8px;
+  background-color: #e1e6ec;
+  color: black;
+  text-align: center;
+  /* box-shadow: 5px 5px 11px #a2b1c6, -5px -5px 11px #fff; */
+}
+
+.music-container h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.music-container img {
+  width: 80%;
+  margin-bottom: 12px;
+}
+
+.level {
+  width: 80%;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #e1e6ec;
+  box-shadow: 2px 2px 5px #a2b1c6, -2px -2px 5px #fff;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+
+.level::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #a2b1c6;
+  box-shadow: 2px 2px 5px #a2b1c6, -2px -2px 5px #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+}
+
+.buttons {
+  display: inline-block;
+  margin: 12px 0;
+}
+
+.buttons button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #e1e6ec;
+  box-shadow: 2px 2px 5px #a2b1c6, -2px -2px 5px #fff;
+  border: none;
+}
+
+#play {
+  margin: 0 16px;
+}
+
+.buttons button img {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+}
+
+.buttons button:hover {
+  transform: scale(1.15);
+}
+
+.buttons button:active {
+  transform: scale(1.15);
+  background-color: #a2b1c6;
+  box-shadow: 2px 2px 5px #a2b1c6, -2px -2px 5px #fff;
+  outline: nones;
+  border: none;
+}
+
+.buttons button:focus {
+  outline: 0;
+}
+/* End music player */

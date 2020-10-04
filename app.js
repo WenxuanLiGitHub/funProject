@@ -2,16 +2,16 @@ function init() {
   const slides = document.querySelectorAll(".slide");
   const pages = document.querySelectorAll(".page");
   const backgrounds = [
-    `radial-gradient(#2B3760, #0B1023)`,
+    `radial-gradient(#221e35, #0B1023)`,
     `radial-gradient(#4E3022, #161616)`,
-    `radial-gradient(#4E4342, #161616)`
+    `radial-gradient(#4E4342, #161616)`,
   ];
   //Tracker
   let current = 0;
   let scrollSlide = 0;
 
   slides.forEach((slide, index) => {
-    slide.addEventListener("click", function() {
+    slide.addEventListener("click", function () {
       changeDots(this);
       nextSlide(index);
       scrollSlide = index;
@@ -19,7 +19,7 @@ function init() {
   });
 
   function changeDots(dot) {
-    slides.forEach(slide => {
+    slides.forEach((slide) => {
       slide.classList.remove("active");
     });
     dot.classList.add("active");
@@ -36,16 +36,16 @@ function init() {
     const portofolio = document.querySelector(".portofolio");
 
     const tl = new TimelineMax({
-      onStart: function() {
-        slides.forEach(slide => {
+      onStart: function () {
+        slides.forEach((slide) => {
           slide.style.pointerEvents = "none";
         });
       },
-      onComplete: function() {
-        slides.forEach(slide => {
+      onComplete: function () {
+        slides.forEach((slide) => {
           slide.style.pointerEvents = "all";
         });
-      }
+      },
     });
 
     tl.fromTo(currentLeft, 0.3, { y: "-10%" }, { y: "-100%" })
@@ -79,7 +79,7 @@ function init() {
 
   function switchDots(dotNumber) {
     const activeDot = document.querySelectorAll(".slide")[dotNumber];
-    slides.forEach(slide => {
+    slides.forEach((slide) => {
       slide.classList.remove("active");
     });
     activeDot.classList.add("active");
@@ -127,11 +127,57 @@ function init() {
   hamburger.addEventListener("click", () => {
     tl.reversed() ? tl.play() : tl.reverse();
   });
+
+  // Music player
+  music_name = "./music/elle-pleut.mp3";
+  let play_btn = document.querySelector("#play");
+  let prev_btn = document.querySelector("#pre");
+  let next_btn = document.querySelector("#next");
+  let range = document.querySelector("#range");
+  let play_img = document.querySelector("#play-img");
+  let total_time = 0;
+  let currentTime = 0;
+  let isPlaying = false;
+  let song = new Audio();
+  window.onload = playSong;
+
+  function playSong() {
+    song.src = music_name;
+    console.log(song);
+
+    play_btn.addEventListener("click", function () {
+      if (!isPlaying) {
+        song.play();
+        isPlaying = true;
+        total_time = song.duration;
+        range.max = total_time;
+        play_img.src = "./img/pause.png";
+      } else {
+        song.pause();
+        isPlaying = false;
+        play_img.src = "./img/play.png";
+      }
+      song.addEventListener("ended", function () {
+        song.currentTime = 0;
+        song.pause();
+        isPlaying = false;
+        range.value = 0;
+        play_img.src = "./img/play.png";
+      });
+      song.addEventListener("timeupdate", function () {
+        range.value = song.currentTime;
+      });
+      range.addEventListener("change", function () {
+        song.currentTime = range.value;
+      });
+    });
+  }
+  // End music player
 }
 
 function throttle(func, limit) {
   let inThrottle;
-  return function() {
+  return function () {
     const args = arguments;
     const context = this;
     if (!inThrottle) {
