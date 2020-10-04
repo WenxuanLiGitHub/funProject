@@ -44,8 +44,8 @@ nav {
   display: grid;
   grid-template-columns: 5% 40% 40% 10% 5%;
 }
-.chef,
-.hairstyle {
+.hobbies,
+.experiences {
   position: absolute;
   bottom: 0%;
   left: 0%;
@@ -63,7 +63,7 @@ nav {
 }
 
 .hero img {
-  height: 350px;
+  height: 400px;
   transition: transform 0.3s ease-out;
   align-self: center;
   cursor: pointer;
@@ -107,6 +107,11 @@ nav {
 .details p {
   font-size: 16px;
   padding: 10px 0px 20px 0px;
+}
+
+.experiences .details h1,
+.hobbies .details h1 {
+  margin-bottom: 15px;
 }
 
 .pages {
@@ -338,10 +343,28 @@ nav {
   color: rgb(34, 30, 53);
 }
 
+#artwork-button {
+  margin-top: 15px;
+  background-color: #161616;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#artwork-button:hover {
+  background-color: rosybrown;
+  color: #161616;
+}
+
 .img-overlay {
   position: absolute;
   top: 0;
-  height: 45px;
+  height: 40px;
   text-align: center;
   border-radius: 25px;
   background: rgb(0, 0, 0);
@@ -351,15 +374,19 @@ nav {
   transition: 0.5s ease;
   opacity: 0;
   color: white;
-  font-size: 15px;
+  font-size: 13px;
   padding: 10px;
+}
+
+.hobbies-container {
+  grid-template-columns: 20% 80%s;
 }
 
 /* Music player */
 .music-container {
   align-self: center;
   padding: 16px;
-  width: 350px;
+  width: 230px;
   border-radius: 8px;
   /* background-color: #e1e6ec; */
   background-color: #5c4c4a;
@@ -369,12 +396,12 @@ nav {
 }
 
 .music-container h3 {
-  font-size: 25px;
+  font-size: 15x;
   font-weight: bolder;
 }
 
 .music-container span {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
 }
 
