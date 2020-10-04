@@ -3,8 +3,8 @@ function init() {
   const pages = document.querySelectorAll(".page");
   const backgrounds = [
     `radial-gradient(#221e35, #0B1023)`,
-    `radial-gradient(#4E3022, #161616)`,
     `radial-gradient(#4E4342, #161616)`,
+    `radial-gradient(#4E3022, #161616)`,
   ];
   //Tracker
   let current = 0;
@@ -129,7 +129,7 @@ function init() {
   });
 
   // Music player
-  music_name = "./music/elle-pleut.mp3";
+  music_name = "./music/real.mp3";
   let play_btn = document.querySelector("#play");
   let prev_btn = document.querySelector("#pre");
   let next_btn = document.querySelector("#next");

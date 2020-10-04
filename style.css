@@ -359,30 +359,38 @@ nav {
 .music-container {
   align-self: center;
   padding: 16px;
-  width: 300px;
+  width: 350px;
   border-radius: 8px;
-  background-color: #e1e6ec;
+  /* background-color: #e1e6ec; */
+  background-color: #5c4c4a;
   color: black;
   text-align: center;
-  /* box-shadow: 5px 5px 11px #a2b1c6, -5px -5px 11px #fff; */
+  box-shadow: 5px 5px 11px #171110, -5px -5px 11px #634641;
 }
 
 .music-container h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.music-container span {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .music-container img {
+  margin-top: 12px;
   width: 80%;
   margin-bottom: 12px;
 }
 
 .level {
   width: 80%;
+  height: 15px;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #e1e6ec;
-  box-shadow: 2px 2px 5px #a2b1c6, -2px -2px 5px #fff;
+  background-color: #c29c97;
+  box-shadow: 2px 2px 5px #171110, -2px -2px 5px #634641;
   border-radius: 50px;
   margin-bottom: 10px;
 }
@@ -390,10 +398,11 @@ nav {
 .level::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  background-color: #a2b1c6;
-  box-shadow: 2px 2px 5px #a2b1c6, -2px -2px 5px #fff;
-  width: 25px;
-  height: 25px;
+  background-color: #634641;
+  /* box-shadow: 2px 2px 5px #a2b1c6, -2px -2px 5px #fff; */
+  box-shadow: 2px 2px 5px #171110, -2px -2px 5px #634641;
+  width: 20px;
+  height: 20px;
   border-radius: 25px;
 }
 
@@ -404,11 +413,13 @@ nav {
 
 .buttons button {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50px;
-  background-color: #e1e6ec;
-  box-shadow: 2px 2px 5px #a2b1c6, -2px -2px 5px #fff;
+  background-color: #c29c97;
+  /* box-shadow: 2px 2px 5px #a2b1c6, -2px -2px 5px #fff; */
+  box-shadow: 2px 2px 5px #171110, -2px -2px 5px #634641;
+
   border: none;
 }
 
@@ -421,8 +432,10 @@ nav {
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .buttons button:hover {
@@ -431,8 +444,9 @@ nav {
 
 .buttons button:active {
   transform: scale(1.15);
-  background-color: #a2b1c6;
-  box-shadow: 2px 2px 5px #a2b1c6, -2px -2px 5px #fff;
+  background-color: #634641;
+  /* box-shadow: 2px 2px 5px #a2b1c6, -2px -2px 5px #fff; */
+  box-shadow: 2px 2px 5px #171110, -2px -2px 5px #634641;
   outline: nones;
   border: none;
 }
